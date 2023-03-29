@@ -19,12 +19,16 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-	for ( i = 0; format[i] = '\0'; i++)
+	for ( i = 0; format[i] != '\0'; i++)
 		{
 	if (format[i] == '%')
 	{
 		if (format[i + 1] == '\0')
-	string_lenght += get_function_print(aegs, format [i + 1]);
+			return (-1);
+	string_lenght += get_function_print(args, format[i + 1]);
+	i++
+	}
+
 }
 	else 
 	{
@@ -35,5 +39,5 @@ int _printf(const char *format, ...)
 
 	}
 	va_end(args);		
-	return (-1);
+	return (string_lenght);
 }
