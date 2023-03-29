@@ -16,7 +16,7 @@ int _putchar(char c)
 
 
 /**
- *print_c - print char
+ *print_c - prints char
  *@list: list of arg
  *Return: 1 on success
  */
@@ -27,3 +27,75 @@ int print_c(va_list list)
 		return (1);
 }
 
+/**
+  *print_s - prints string
+  *@list: list of arguments
+  *Return: string length
+  */
+
+int print_s(va_list list)
+{
+	int i = 0;
+	char *c = va_arg(list, char *);
+
+	if (c)
+	{
+		for (; c[i]; i++)
+		{
+			_putchar(c[i]);
+		}
+	}
+
+	else
+	{
+		c = "(null)";
+	}
+
+	return (i);
+}
+
+/**
+ *print_int - prints integer
+ *@n: integer to printeded
+ *Return: int
+ */
+
+int print_int(int n)
+{
+	int i = 0;
+	int aux;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		i++;
+		aux = -n;
+	}
+	else
+	{
+		aux = n;
+	}
+
+	if (aux / 10)
+	{		
+		i += print_int(aux / 10);
+	}
+
+	_putchar((aux % 10) + '0');
+	i++;
+
+	return (i);
+}
+
+/**
+ * print_d - prints decimal int
+ * @list: list of arg
+ * Return: decimal int
+ */
+
+int print_d(va_list list)
+{
+	int d = va_arg(list, int);
+
+	return (print_int(d));
+}
