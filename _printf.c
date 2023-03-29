@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 	unsigned int i = 0;
-	unsigned int string_lenght = 0;
+	int strlen = 0;
 	
 	va_list args;
 
@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i + 1] == '\0')
 			return (-1);
-	string_lenght += get_function_print(args, format[i + 1]);
+	strlen += get_function_print(args, format[i + 1]);
 	i++
 	}
 
@@ -39,5 +39,5 @@ int _printf(const char *format, ...)
 
 	}
 	va_end(args);		
-	return (string_lenght);
+	return (strlen);
 }
