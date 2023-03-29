@@ -26,10 +26,10 @@ int _printf(const char *format, ...)
 		if (format[i + 1] == '\0') /* Si el siguiente carácter es el final del string, retorna -1 (error) */
 			return (-1);
 	strlen += get_function_print(args, format[i + 1]); /*  Llama a la función correspondiente para imprimir el argumento */
-	i++ /* vanza una posición adicional para saltar el carácter de formato */ 
+	i++ /* Avanza una posición adicional para saltar el carácter de formato */ 
 	}
 
-}
+
 	else 
 	{
 	_putchar(format[i]; /* Si no se está especificando un formato, simplemente imprime el carácter */
