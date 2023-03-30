@@ -7,3 +7,23 @@
  * Return: Pointer to selected function or length of string printed
 */
 #include "main.h"
+
+	int format _specifier_match(va_list args, char spec)
+{
+	struc_print caracter[] = {
+		{"c", },
+		{"%", },
+		{"s", },
+		{"d", },
+		{"i", },
+		{NULL, NULL}
+	};
+
+	
+
+
+
+
+
+	return();
+}
