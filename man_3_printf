@@ -1,0 +1,12 @@
+.TH NAME  man_3_printf                                                           Liunux  Manual
+
+_printf
+.SH SYNOPSIS
+
+.sp 1
+	int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+_printf() function sends a formatted string to the standard 
+ 
+.BR _printf ()
