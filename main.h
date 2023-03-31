@@ -24,5 +24,6 @@ int print_c(va_list list);
 int print_s(va_list list);
 int print_int(int n);
 int print_d(va_list list);
+int print_p(va_list list);
 
 #endif
