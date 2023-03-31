@@ -18,7 +18,6 @@ typedef struct ops
 } specifier_t;
 
 int _printf(const char *format, ...);
-int format_specifier_match(va_list list, char spec)
 int _putchar(char c);
 int print_c(va_list list);
 int print_s(va_list list);
