@@ -1,6 +1,6 @@
 
 /**
- * format _specifier_match - Selects correct function
+ * format_specifier_match - Selects correct function
  * @args: Arguments
  * @spec: Character corresponding to printf specifier (format[i + 1])
  *
@@ -8,9 +8,9 @@
 */
 #include "main.h"
 
-	int format _specifier_match(va_list args, char spec)
+	int format_specifier_match(va_list args, char spec)
 {
-	struc_print caracter[] = {
+	specifier_t caracter[] = {
 		{"c", },
 		{"%", },
 		{"s", },
