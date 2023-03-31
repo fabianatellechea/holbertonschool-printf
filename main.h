@@ -24,10 +24,7 @@ int print_c(va_list list);
 int print_s(va_list list);
 int print_i(int n);
 int print_d(va_list list);
-<<<<<<< HEAD
 specifier_t format_specifier(int i);
-=======
 int print_p(va_list list);
->>>>>>> 9253a5f1a65dfd5f2eb7dc69f042834825d25317
 
 #endif

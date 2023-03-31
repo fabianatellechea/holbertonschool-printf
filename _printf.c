@@ -21,20 +21,17 @@ int _printf(const char *format, ...)
 
 	for (i = 0; format[i] != '\0'; i++) /*  Recorre el string "format" hasta el final */
 	{
-<<<<<<< HEAD
 		if (format[i] == '%') /* Si se encuentra un carácter %, se está especificando un formato */
 		{
 			if (format[i + 1] == '\0') /* Si el siguiente carácter es el final del string, retorna -1 (error) */
 				return (-1);
 		}
 		strlen += specifier_t(args, format[i + 1]); /*  Llama a la función correspondiente para imprimir el argumento */
-		i++ /* Avanza una posición adicional para saltar el carácter de formato */ 
-=======
+		i++ /* Avanza una posición adicional para saltar el carácter de formato */
 		if (format[i + 1] == '\0') /* Si el siguiente carácter es el final del string, retorna -1 (error) */
 			return (-1);
 	strlen += format_specifier_match(list, format[i + 1]); /*  Llama a la función correspondiente para imprimir el argumento */
 	i++ /* Avanza una posición adicional para saltar el carácter de formato */ 
->>>>>>> 9253a5f1a65dfd5f2eb7dc69f042834825d25317
 	}
 
 
@@ -44,11 +41,8 @@ int _printf(const char *format, ...)
 	
 		strlen++; /* Aumenta el contador de caracteres impresos */
 	}
-<<<<<<< HEAD
 
 	va_end(args);	/* Finaliza la lista de argumentos variables */
-=======
 	va_end(list);	/* Finaliza la lista de argumentos variables */
->>>>>>> 9253a5f1a65dfd5f2eb7dc69f042834825d25317
 	return (strlen); /* Retorna la cantidad de caracteres impresos */
 }
