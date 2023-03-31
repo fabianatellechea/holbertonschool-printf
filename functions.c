@@ -60,9 +60,10 @@ int print_s(va_list list)
  *Return: int
  */
 
-int print_i(int n)
+int print_i(va_list list)
 {
 	int i = 0;
+	int n = va_arg(list, int);
 	int aux;
 
 	if (n < 0)
