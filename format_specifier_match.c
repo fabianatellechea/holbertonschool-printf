@@ -11,11 +11,11 @@
 	int format_specifier_match(va_list list, char spec)
 {
 	specifier_t caracter[] = {
-		{"c",print_c },
-		{"%", },
-		{"s",print_s },
-		{"d", },
-		{"i", },
+		{"c", print_c},
+		{"s", print_s},
+		{"d", print_d},
+		{"i", print_int},
+		{"%", print_p},
 		{NULL, NULL}
 	};
 
