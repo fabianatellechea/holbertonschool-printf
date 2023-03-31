@@ -12,9 +12,9 @@ int _printf(const char *format, ...)
 	unsigned int i = 0; /* indice para recorrer el string 'format'*/
 	int strlen = 0; /* contador de caracteres */
 	
-	va_list args; /* lista de argunmentos variables */
+	va_list list; /* lista de argunmentos variables */
 
-	va_start(args, format); /* inicializa la lista de argumentos variables, con el ultimo argumento conocido */
+	va_start(list, format); /* inicializa la lista de argumentos variables, con el ultimo argumento conocido */
 
 	if (format == NULL) /* si el string format es NULL, retorna -1 (error)*/
 		return (-1);
