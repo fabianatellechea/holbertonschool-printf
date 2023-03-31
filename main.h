@@ -18,7 +18,7 @@ typedef struct ops
 } specifier_t;
 
 int _printf(const char *format, ...);
-int _putchar(va_list arg);
+int _putchar(char c);
 int print_c(va_list list);
 int print_s(va_list list);
 int print_int(int n);
