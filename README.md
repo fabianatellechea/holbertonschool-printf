@@ -7,8 +7,8 @@ This is a simple implementation of printf function that formats and prints data
 >Description
 The _printf() function produces output according to a prototype which is described below. This function write its output to the stdout, the standard output stream. Returns the count of printed characters when the function is successful and -1 when the function fails.
 
+![carbon](https://user-images.githubusercontent.com/124454895/229005428-2049f357-83b0-4742-a38b-c663c9560968.png)
 
-![prototypo](https://user-images.githubusercontent.com/124454895/229004969-d5fa16c8-3b50-4fe3-9568-80e498b2d75f.png)
 
 *The function receives a format string (format) and a variable list of arguments (args) that are specified with ellipses (...) in the function definition.
 A variable i of type unsigned int and strlen of type int are declared. The variable i is used to iterate through the format string and the variable strlen is used to count the number of characters that are printed.
@@ -20,7 +20,8 @@ If a % character is found in the format string, a check is made to see if there 
 If there is no valid specifier, -1 is returned. 
 If a valid specifier is found, the function is called;*
 
-![prototypo2](https://user-images.githubusercontent.com/124454895/229005010-33a6ce39-5d5f-4953-b47c-e0a79cf81d48.png)
+![prototypo](https://user-images.githubusercontent.com/124454895/229005294-445ac737-5999-4e3a-88fa-19154222c1fa.png)
+
 
 *which performs a corresponding action according to the specifier, and updates the variable strlen with the number of characters printed.
 If a % character is not found in the format string, the current character is printed and the strlen variable is updated.
