@@ -11,9 +11,9 @@
 	int format_specifier_match(va_list args, char spec)
 {
 	specifier_t caracter[] = {
-		{"c", },
+		{"c",print_c },
 		{"%", },
-		{"s", },
+		{"s",print_s },
 		{"d", },
 		{"i", },
 		{NULL, NULL}
