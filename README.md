@@ -7,7 +7,7 @@ This is a simple implementation of printf function that formats and prints data
 >Description
 The _printf() function produces output according to a prototype which is described below. This function write its output to the stdout, the standard output stream. Returns the count of printed characters when the function is successful and -1 when the function fails.
 
-![ccc](https://user-images.githubusercontent.com/124454895/229005942-0440b7b0-984c-4d7f-9738-9ee9e9ebe8f7.png)
+![xxxz](https://user-images.githubusercontent.com/124454895/229006128-acf5b9b0-5ec5-4b69-991e-6f359f755497.png)
 
 
 
