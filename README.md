@@ -7,7 +7,9 @@ This is a simple implementation of printf function that formats and prints data
 >Description
 The _printf() function produces output according to a prototype which is described below. This function write its output to the stdout, the standard output stream. Returns the count of printed characters when the function is successful and -1 when the function fails.
 
-![carbon](https://user-images.githubusercontent.com/124454895/229005428-2049f357-83b0-4742-a38b-c663c9560968.png)
+![ccc](https://user-images.githubusercontent.com/124454895/229005942-0440b7b0-984c-4d7f-9738-9ee9e9ebe8f7.png)
+
+
 
 
 *The function receives a format string (format) and a variable list of arguments (args) that are specified with ellipses (...) in the function definition.
