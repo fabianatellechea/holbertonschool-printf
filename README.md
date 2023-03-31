@@ -15,7 +15,7 @@ The _printf() function produces output according to a prototype which is describ
 
 
 
-*The function receives a format string (format) and a variable list of arguments (args) that are specified with ellipses (...) in the function definition.
+*The function receives a format string (format) and a variable list of arguments (list) that are specified with ellipses (...) in the function definition.
 A variable i of type unsigned int and strlen of type int are declared. The variable i is used to iterate through the format string and the variable strlen is used to count the number of characters that are printed.
 A variable argument list is initialized using va_start(), which takes the address of the last argument before the ellipses.
 If the format string is NULL, the function returns -1.*
