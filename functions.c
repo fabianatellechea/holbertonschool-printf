@@ -79,7 +79,7 @@ int print_i(va_list list)
 
 	if (aux / 10)
 	{		
-		i += print_int(aux / 10);
+		i += print_i(aux / 10);
 	}
 
 	_putchar((aux % 10) + '0');
