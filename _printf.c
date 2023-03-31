@@ -38,6 +38,6 @@ int _printf(const char *format, ...)
 }
 
 	}
-	va_end(args);	/* Finaliza la lista de argumentos variables */
+	va_end(list);	/* Finaliza la lista de argumentos variables */
 	return (strlen); /* Retorna la cantidad de caracteres impresos */
 }
