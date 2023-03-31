@@ -1,5 +1,7 @@
 
  ## Project printf 
+  ##### Write a function that produces output according to a format.
+  ----------------------------------------------------------------------------------------------------------
 
 *printf is a c language function, provided by the stdio library, in this project we will re-create a printf function that prints through the introduction of a format, using variadic functions and structures to connect everything when compiling*
 
@@ -23,8 +25,9 @@ If a % character is found in the format string, a check is made to see if there 
 If there is no valid specifier, -1 is returned. 
 If a valid specifier is found, the function is called;*
 
-![prototypo](https://user-images.githubusercontent.com/124454895/229005294-445ac737-5999-4e3a-88fa-19154222c1fa.png)
 
+
+![carbon](https://user-images.githubusercontent.com/124454895/229164501-9e316eb2-8739-48a6-9d8a-20aa543dc853.png)
 
 *which performs a corresponding action according to the specifier, and updates the variable strlen with the number of characters printed.
 If a % character is not found in the format string, the current character is printed and the strlen variable is updated.
