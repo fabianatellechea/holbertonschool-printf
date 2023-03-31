@@ -17,7 +17,7 @@
 		{"i", print_int},
 		{"%", print_p},
 		{NULL, NULL}
-	};
+	};  					/* prototypes in main.h*/
 
 	
 
