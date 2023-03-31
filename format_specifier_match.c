@@ -8,7 +8,7 @@
 */
 #include "main.h"
 
-	int format_specifier_match(va_list args, char spec)
+	int format_specifier_match(va_list list, char spec)
 {
 	specifier_t caracter[] = {
 		{"c",print_c },
