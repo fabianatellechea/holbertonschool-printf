@@ -20,8 +20,16 @@
 	};  					/* prototypes in main.h*/
 
 	
+	int i = 0;
 
-
+	while (caracter[i].op && spec)
+	{	/*check that spec matches the functions*/
+		if (caracter[i].op[0] == spec)
+		{	/* if there is a coincidence, take the correct function */
+			return ((caracter[i].f)(list));
+		}
+		i++;
+}
 
 
 
