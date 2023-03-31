@@ -55,12 +55,12 @@ int print_s(va_list list)
 }
 
 /**
- *print_int - prints integer
+ *print_i - prints integer
  *@n: integer to printeded
  *Return: int
  */
 
-int print_int(int n)
+int print_i(int n)
 {
 	int i = 0;
 	int aux;
@@ -97,5 +97,5 @@ int print_d(va_list list)
 {
 	int d = va_arg(list, int);
 
-	return (print_int(d));
+	return (print_i(d));
 }

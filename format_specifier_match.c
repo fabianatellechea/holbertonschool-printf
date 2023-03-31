@@ -1,29 +1,19 @@
-
+#include "main.h"
 /**
- * format _specifier_match - Selects correct function
- * @args: Arguments
- * @spec: Character corresponding to printf specifier (format[i + 1])
- *
+ * format_specifier - selects correct function
+ * @j: iterator
  * Return: Pointer to selected function or length of string printed
 */
-#include "main.h"
 
-	int format _specifier_match(va_list args, char spec)
+specifier_t format_specifier(int j)
 {
-	struc_print caracter[] = {
-		{"c", },
-		{"%", },
-		{"s", },
-		{"d", },
-		{"i", },
+	specifier_t ops[] = {
+		{"c", print_c},
+		{"s", print_s},
+		{"d", print_d},
+		{"i", print_i},
 		{NULL, NULL}
 	};
 
-	
-
-
-
-
-
-	return();
+	return(ops[j]);
 }
