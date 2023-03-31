@@ -1,5 +1,6 @@
 
-## Project printf
+ ## Project printf 
+
 *printf is a c language function, provided by the stdio library, in this project we will re-create a printf function that prints through the introduction of a format, using variadic functions and structures to connect everything when compiling*
 
 This is a simple implementation of printf function that formats and prints data
