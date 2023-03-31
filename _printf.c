@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[i + 1] == '\0') /* Si el siguiente carácter es el final del string, retorna -1 (error) */
 			return (-1);
-	strlen += specifier_t(args, format[i + 1]); /*  Llama a la función correspondiente para imprimir el argumento */
+	strlen += format_specifier_match(args, format[i + 1]); /*  Llama a la función correspondiente para imprimir el argumento */
 	i++ /* Avanza una posición adicional para saltar el carácter de formato */ 
 	}
 
