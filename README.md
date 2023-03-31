@@ -4,20 +4,44 @@ printf is a c language function, provided by the stdio library, in this project 
 
 This is a simple implementation of printf function that formats and prints data
 
-Description
+>Description
 The _printf() function produces output according to a prototype which is described below. This function write its output to the stdout, the standard output stream. Returns the count of printed characters when the function is successful and -1 when the function fails.
 
-Prototype: int _printf(const char *format, ...);
+```Prototype: int _printf(const char *format, ...);```
 
 The function receives a format string (format) and a variable list of arguments (args) that are specified with ellipses (...) in the function definition.
 A variable i of type unsigned int and strlen of type int are declared. The variable i is used to iterate through the format string and the variable strlen is used to count the number of characters that are printed.
 A variable argument list is initialized using va_start(), which takes the address of the last argument before the ellipses.
-If the format string is NULL, the function returns -1. Otherwise, a for loop is performed to traverse the format string.
+If the format string is NULL, the function returns -1.
+
+Otherwise, a for loop is performed to traverse the format string.
 If a % character is found in the format string, a check is made to see if there is a valid specifier after the % character. 
 If there is no valid specifier, -1 is returned. 
-If a valid specifier is found, the function is called; int format _specifier_match(va_list args, char spec), which performs a corresponding action according to the specifier, and updates the variable strlen with the number of characters printed.
+If a valid specifier is found, the function is called; 
+
+```int format _specifier_match(va_list args, char spec)```, 
+
+which performs a corresponding action according to the specifier, and updates the variable strlen with the number of characters printed.
 If a % character is not found in the format string, the current character is printed and the strlen variable is updated.
 After traversing the format string, va_end() is called to finalize the variable argument list.
 Finally, the function returns strlen, which contains the total number of characters printed.
+
+| Specifiers | Description     |
+| --- | --- |
+| %d | Print   decimal     numbers          |
+| %i | Print  integers             |
+| %c | Print    single     character       |
+| %s | Print     string     of   characteres |
+
+
+
+
+| File | Description |
+| --- | --- |
+| [main.h] | Header file  
+| [main.c] |Include all function prototypes  
+| [...] |Include structure of specifiers |
+| [_printf.c] | Project function: \_printf 
+
 
 
