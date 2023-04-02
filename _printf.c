@@ -2,47 +2,53 @@
 
 /**
  * _printf - Writes output to stdout
- * @format: String to print
- *
- * Return: Number of characters printed
-*/
+ * @format: string to print
+ * Return: number of characters printed
+ */
 
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0; /* indice para recorrer el string 'format'*/
-	int strlen = 0; /* contador de caracteres */
-	
-	va_list list; /* lista de argunmentos variables */
+        va_list list;
+        int i = 0;
+        int len = 0;
+        int (*f)(va_list);
 
-	va_start(list, format); /* inicializa la lista de argumentos variables, con el ultimo argumento conocido */
+        va_start(list, format);
 
-	if (format == NULL) /* si el string format es NULL, retorna -1 (error)*/
-		return (-1);
+        if (format == NULL)
+        {
+                return (-1);
+        }
 
-	for (i = 0; format[i] != '\0'; i++) /*  Recorre el string "format" hasta el final */
-	{
-		if (format[i] == '%') /* Si se encuentra un carácter %, se está especificando un formato */
+        while (format[i])
+        {
+                if (format[i] == '%' && format[i + 1])
+                {
+                        f = specifier_match(format[i + 1]);
+
+                        if (f != NULL)
+                        {
+                                len += f(list);
+                                i += 2;
+                                continue;
+                        }
+
+                }
+
+/*		else if (format[i] == '%' && format[i + 1] == '%')
 		{
-			if (format[i + 1] == '\0') /* Si el siguiente carácter es el final del string, retorna -1 (error) */
-				return (-1);
-		}
-		strlen += specifier_t(args, format[i + 1]); /*  Llama a la función correspondiente para imprimir el argumento */
-		i++ /* Avanza una posición adicional para saltar el carácter de formato */
-		if (format[i + 1] == '\0') /* Si el siguiente carácter es el final del string, retorna -1 (error) */
-			return (-1);
-	strlen += format_specifier_match(list, format[i + 1]); /*  Llama a la función correspondiente para imprimir el argumento */
-	i++ /* Avanza una posición adicional para saltar el carácter de formato */ 
-	}
+			_putchar('%');
+                        len++;
+                        i++;
 
+                        continue;
+                } */
 
-	else 
-	{
-		_putchar(format[i]; /* Si no se está especificando un formato, simplemente imprime el carácter */
-	
-		strlen++; /* Aumenta el contador de caracteres impresos */
-	}
+                _putchar(format[i]);
+                len++;
+                i++;
+        }
 
-	va_end(args);	/* Finaliza la lista de argumentos variables */
-	va_end(list);	/* Finaliza la lista de argumentos variables */
-	return (strlen); /* Retorna la cantidad de caracteres impresos */
+        va_end(list);
+        return (len);
 }

@@ -38,17 +38,14 @@ int print_s(va_list list)
 	int i = 0;
 	char *c = va_arg(list, char *);
 
-	if (c)
-	{
-		for (; c[i]; i++)
-		{
-			_putchar(c[i]);
-		}
-	}
-
-	else
+	if (c == NULL)
 	{
 		c = "(null)";
+	}
+
+	for (; c[i]; i++)
+	{
+		_putchar(c[i]);
 	}
 
 	return (i);
@@ -56,47 +53,57 @@ int print_s(va_list list)
 
 /**
  *print_i - prints integer
- *@n: integer to printeded
+ *@n: integer to printed
  *Return: int
  */
 
 int print_i(va_list list)
 {
-	int i = 0;
-	int n = va_arg(list, int);
-	int aux;
+        int i = 0;
+        int n = va_arg(list, int);
+        int div = 1;
+        int d;
+        unsigned int aux;
 
-	if (n < 0)
-	{
-		_putchar('-');
-		i++;
-		aux = -n;
-	}
-	else
-	{
-		aux = n;
-	}
+        if (n < 0)
+        {
+                _putchar('-');
+                aux = -n;
+                i++;
+        }
+        else
+        {
+                aux = n;
+        }
 
-	if (aux / 10)
-	{		
-		i += print_i(aux / 10);
-	}
+        while (aux / div >= 10)
+        {
+                div = div * 10;
+        }
 
-	_putchar((aux % 10) + '0');
-	i++;
+        while (div > 0)
+        {
+                d = aux / div;
+                _putchar(d + '0');
+                aux %= div;
+                div /= 10;
+                i++;
+        }
 
-	return (i);
+        return (i);
 }
 
+
+
 /**
- * print_d - prints decimal int
- * @list: list of arg
- * Return: decimal int
+ *print_p - prints percent
+ *@list: list
+ *Return: 1
  */
 
-int print_d(va_list list)
+int print_p(va_list list __attribute__((unused)))
 {
-	int d = va_arg(list, int);
 
-	return (print_i(d));
+	_putchar('%');
+	return (1);
 }
