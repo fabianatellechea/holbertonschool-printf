@@ -18,7 +18,7 @@ int (*specifier_match(char format))(va_list)
 		{"i", print_i},
 		{"%", print_p},
 		{'\0', NULL}
-	};  					/* prototypes in main.h*/
+	};
 
 	while (ops[i].op)
 	{

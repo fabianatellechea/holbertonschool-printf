@@ -53,44 +53,44 @@ int print_s(va_list list)
 
 /**
  *print_i - prints integer
- *@n: integer to printed
+ *@list: list
  *Return: int
  */
 
 int print_i(va_list list)
 {
-        int i = 0;
-        int n = va_arg(list, int);
-        int div = 1;
-        int d;
-        unsigned int aux;
+	int i = 0;
+	int n = va_arg(list, int);
+	int div = 1;
+	int d;
+	unsigned int aux;
 
-        if (n < 0)
-        {
-                _putchar('-');
-                aux = -n;
-                i++;
-        }
-        else
-        {
-                aux = n;
-        }
+	if (n < 0)
+	{
+		_putchar('-');
+		aux = -n;
+		i++;
+	}
+	else
+	{
+		aux = n;
+	}
 
-        while (aux / div >= 10)
-        {
-                div = div * 10;
-        }
+	while (aux / div >= 10)
+	{
+		div = div * 10;
+	}
 
-        while (div > 0)
-        {
-                d = aux / div;
-                _putchar(d + '0');
-                aux %= div;
-                div /= 10;
-                i++;
-        }
+	while (div > 0)
+	{
+		d = aux / div;
+		_putchar(d + '0');
+		aux %= div;
+		div /= 10;
+		i++;
+	}
 
-        return (i);
+	return (i);
 }
 
 
