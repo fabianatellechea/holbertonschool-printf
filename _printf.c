@@ -1,5 +1,4 @@
 #include "main.h"
-#define BUFFER 1024
 
 /**
  * _printf - Writes output to stdout

@@ -1,5 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
+#define BUFFER 1024
+
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stddef.h>
