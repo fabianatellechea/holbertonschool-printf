@@ -26,8 +26,8 @@ If there is no valid specifier, -1 is returned.
 If a valid specifier is found, the function is called;*
 
 
+![carbon (1)](https://user-images.githubusercontent.com/124454895/229359570-c1a5a639-470e-447d-a498-8913eb5b1237.png)
 
-![carbon](https://user-images.githubusercontent.com/124454895/229164501-9e316eb2-8739-48a6-9d8a-20aa543dc853.png)
 
 *which performs a corresponding action according to the specifier, and updates the variable strlen with the number of characters printed.
 If a % character is not found in the format string, the current character is printed and the strlen variable is updated.
