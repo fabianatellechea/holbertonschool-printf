@@ -48,7 +48,7 @@ Finally, the function returns strlen, which contains the total number of charact
 | --- | --- |
 | [main.h] | Header file  
 | [main.c] |Include all function prototypes  
-| [...] |Include structure of specifiers |
+| [specifier_match.c] |Include structure of specifiers |
 | [_printf.c] | Project function: \_printf 
 
 
