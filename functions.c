@@ -61,9 +61,9 @@ int print_i(va_list list)
 {
 	int i = 0;
 	int n = va_arg(list, int);
-	int div = 1; /* divide the integer into digits */
-	int d; /*store the current digit*/
-	unsigned int aux; /*handle the absolute value of the integer */
+	int div = 1;
+	int d;
+	unsigned int aux;
 
 	if (n < 0)
 	{
@@ -76,7 +76,6 @@ int print_i(va_list list)
 		aux = n;
 	}
 
-	/* Determine the divisor needed to get the first digit */
 	while (aux / div >= 10)
 	{
 		div = div * 10;
@@ -84,10 +83,10 @@ int print_i(va_list list)
 
 	while (div > 0)
 	{
-		d = aux / div;/* Get the current digit by dividing the aux variable by the divisor */
+		d = aux / div;
 		_putchar(d + '0');
-		aux %= div;/* Update the auxiliary value by removing the current digit */
-		div /= 10;/* Update the divisor by dividing it by 10 to get the next digit */
+		aux %= div;
+		div /= 10;
 		i++;
 	}
 
