@@ -52,4 +52,8 @@ Finally, the function returns strlen, which contains the total number of charact
 | [_printf.c] | Project function: \_printf 
 
 
-                                             
+
+
+![flow](https://user-images.githubusercontent.com/124454895/229370555-94efeee1-c9d1-4fed-be31-660664f33e94.PNG)
+
+                                           
